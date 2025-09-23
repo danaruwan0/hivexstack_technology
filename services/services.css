@@ -73,122 +73,167 @@ body {
   right: 20px;
 }
 
-/* =========================
-   Hero Section
-========================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hero Section */
 .hero {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 90vh;
+  background: linear-gradient(to right, #111111a1, #33333391),
+    url("../assets/service2.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
 }
 
-.hero-overlay {
-  flex: 1;
-  position: relative;
-  margin: 80px;
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #f5c400;
 }
 
-.hero-overlay img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
-.hero-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 10px 10px 10px 80px;
-  background-color: #f8f8f8;
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
-.hero-content h1 {
-  font-size: 2.5rem;
+/* Service Card */
+.service-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.service-icon {
+  font-size: 40px;
+  color: #f5c400;
+  margin-bottom: 15px;
+}
+
+.service-card h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
   margin-bottom: 20px;
 }
 
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+.service-card ul li {
+  margin-bottom: 8px;
+  color: #444;
+  font-size: 14px;
 }
 
-.btn-outline,
-.btn-fill {
+/* Order Button */
+.btn-order {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #f5c400;
+  color: #f5c400;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-order:hover {
+  background: #f5c400;
+  color: #111;
+}
+
+
+.btn-contact {
   display: inline-block;
   padding: 15px 25px;
-  margin-right: 15px;
+  background: #f5c400;
+  color: #111;
   text-decoration: none;
-  transition: all 0.3s;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin-top: 20px;
+  width: 150px;
+  border: 2px solid #f5c400;
 }
 
-.btn-outline {
-  border: 2px solid #222;
-  color: #222;
+.btn-contact:hover {
+  background: #e0b200;
 }
 
-.btn-outline:hover {
-  background-color: #222;
-  color: #fff;
-}
-
-.btn-fill {
-  border: none;
-  background-color: #222;
-  color: #fff;
-}
-
-/* =========================
-   Cards
-========================= */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 20px;
-}
-
-.card {
-  background: linear-gradient(135deg, #ffffff, #f8f9ff);
-  padding: 25px;
+/* Call To Action */
+.cta {
   text-align: center;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
+  background: #f9f9f9;
+  padding: 60px 20px;
 }
 
-.card:hover {
-  transform: translateY(-10px) scale(1.03) rotateX(5deg);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-}
-
-.card i {
-  font-size: 2.5rem;
-  color: #f5c400;
+.cta h3 {
+  font-size: 26px;
   margin-bottom: 15px;
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: #111;
 }
 
-.card:hover i {
-  transform: scale(1.2);
-  color: #ff9100;
-}
-
-.card h3 {
-  color: #222;
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-
-.card p {
+.cta p {
+  font-size: 16px;
+  margin-bottom: 20px;
   color: #555;
-  font-size: 0.95rem;
-  line-height: 1.5;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* =========================
    Footer

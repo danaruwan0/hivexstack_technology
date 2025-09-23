@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Hivexstack Technology</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="contact.css">
+
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="nav">
+    <div class="nav-logo">
+      <img src="../assets/logo-outline.png" alt="Hivexstack Logo">
+    </div>
+
+    <!-- Menu Icon -->
+    <div class="nav-btn" id="navBtn">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav class="nav-box" id="navBox">
+      <!-- Close Button -->
+      <div class="close-btn" id="closeBtn"><i class="fas fa-times"></i></div>
+      <ul class="nav-list">
+        <li><a href="../home.html" class="nav-link">Home</a></li>
+        <li><a href="../about/about.html" class="nav-link">About</a></li>
+        <li><a href="../services/service.html" class="nav-link">Services</a></li>
+        <li><a href="../contact/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Contact Hero -->
+  <section class="contact-hero">
+    <h1>Contact Us</h1>
+    <p>Let’s build something great together! Reach out to us for project inquiries, support, or collaboration.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-container">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h1>If there's anything we can help you with, just let us know.</h1>
+        <p class="conta-p-tag">
+          After receiving your request, Hivexstack Technology will review your message and contact
+          you promptly. Ensure your email is correct so we can assist you efficiently and bring your project to life.
+        </p>
+        <p><strong>Email:</strong> hivexstacktechnology@gmail.com</p>
+        <p><strong>Phone:</strong> +94 77 028 0529</p>
+        <p><strong>Address:</strong> Colombo, Sri Lanka (Remote Work)</p>
+      </div>
+
+      <form id="contact-form" class="contact-form">
+
+  <div class="form-group">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="user_name" placeholder="Enter your name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="user_email" placeholder="Enter your email" required>
+  </div>
+
+  <!-- ////////////// -->
+   <div class="form-group">
+    <label for="">Title</label>
+    <input type="text" id="title" name="user_title" placeholder="Enter your title" required>
+  </div>
+
+
+
+  <!-- Visible textarea for user only (no name -> won't be submitted) -->
+  <div class="form-group">
+    <label for="message_visible">Message</label>
+    <textarea id="message_visible" placeholder="Write your message here..." rows="5" required></textarea>
+  </div>
+
+  <!-- Hidden element that will actually be submitted as 'message' -->
+  <input type="hidden" id="message" name="message" value="">
+
+  <button type="submit" class="btn-submit">Send Message</button>
+</form>
+
+
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Company Info -->
+      <div class="footer-col">
+        <h3>Hivexstack Technology</h3>
+        <p>We provide affordable and smart software solutions for Web, Mobile, Desktop, and Special Campus Assignments.
+        </p>
+      </div>
+
+      <!-- Services Links -->
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="./services/service.html">Web Development</a></li>
+          <li><a href="./services/service.html">Mobile Apps</a></li>
+          <li><a href="./services/service.html">Desktop Apps</a></li>
+          <li><a href="./services/service.html">Campus Assignments</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../home.html">Home</a></li>
+          <li><a href="../about/about.html">About Us</a></li>
+          <li><a href="../services/service.html"></a>Services</li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>Email: hivexstacktechnology@gmail.com</p>
+        <p>Phone: +94 77 028 0529</p>
+        <p>Address: Colombo, Sri Lanka (Remote Work)</p>
+      </div>
+
+
+      
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Hivexstack Technology. All rights reserved. Development by Hivexstack Technology  </p>
+
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="contact.js"></script>
+</body>
+
+</html>

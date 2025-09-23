@@ -73,122 +73,167 @@ body {
   right: 20px;
 }
 
-/* =========================
-   Hero Section
-========================= */
-.hero {
+
+
+/* Hero Section */
+.about-hero {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  background-image: linear-gradient(to right, rgba(17, 17, 17, 0.875), rgba(51, 51, 51, 0.637)), url("../assets/ab.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #f5c400;
+}
+
+.about-hero p {
+  max-width: 800px;
+  margin: 0 auto 25px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Startup Button Style - Solid Background */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background:transparent ;  /* solid background */
+  color: #f5c400;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #f5c400;
+  border-radius: 0; /* no rounded corners */
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background: #e0b200;
+  color: white;
+}
+
+
+
+
+/* About Sections */
+.about-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.about-section {
+  margin-bottom: 50px;
+}
+
+.about-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #111;
+  border-left: 5px solid #f5c400;
+  padding-left: 10px;
+}
+
+.about-section p,
+.about-section ul {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.about-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-section li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+/* Team Section */
+.team-section {
+  text-align: center;
+}
+
+.team-cards {
   display: flex;
   flex-wrap: wrap;
-  min-height: 90vh;
-}
-
-.hero-overlay {
-  flex: 1;
-  position: relative;
-  margin: 80px;
-}
-
-.hero-overlay img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  gap: 60px;
   justify-content: center;
-  align-items: flex-start;
-  padding: 10px 10px 10px 80px;
-  background-color: #f8f8f8;
+
+
+
+  margin-top: 30px;
 }
 
-.hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.btn-outline,
-.btn-fill {
-  display: inline-block;
-  padding: 15px 25px;
-  margin-right: 15px;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-.btn-outline {
-  border: 2px solid #222;
-  color: #222;
-}
-
-.btn-outline:hover {
-  background-color: #222;
-  color: #fff;
-}
-
-.btn-fill {
-  border: none;
-  background-color: #222;
-  color: #fff;
-}
-
-/* =========================
-   Cards
-========================= */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  max-width: 1100px;
-  margin: 40px auto;
+.team-card {
+  background: #fff;
+  border: 1px solid #ddd;
   padding: 20px;
-}
-
-.card {
-  background: linear-gradient(135deg, #ffffff, #f8f9ff);
-  padding: 25px;
+  width: 250px;
   text-align: center;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-10px) scale(1.03) rotateX(5deg);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+.team-card:hover {
+  transform: translateY(-10px);
 }
 
-.card i {
-  font-size: 2.5rem;
-  color: #f5c400;
+.team-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
   margin-bottom: 15px;
-  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.card:hover i {
-  transform: scale(1.2);
-  color: #ff9100;
+.team-card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #111;
 }
 
-.card h3 {
-  color: #222;
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+.team-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
 }
 
-.card p {
-  color: #555;
-  font-size: 0.95rem;
-  line-height: 1.5;
+/* Social Icons */
+.team-socials a {
+  margin: 0 8px;
+  font-size: 18px;
+  color: #111;
+  transition: color 0.3s;
 }
+
+.team-socials a:hover {
+  color: #f5c400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* =========================
    Footer
