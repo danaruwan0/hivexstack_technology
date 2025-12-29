@@ -1,5 +1,5 @@
 /* =========================
-   Reset
+   Reset / Base Styles
 ========================= */
 * {
   margin: 0;
@@ -14,7 +14,7 @@ body {
 }
 
 /* =========================
-   Navbar
+   Navbar Styles
 ========================= */
 .nav {
   display: flex;
@@ -28,27 +28,16 @@ body {
   z-index: 1000;
 }
 
-.nav-logo img {
-  height: 40px;
-}
+.nav-logo img { height: 40px; }
 
-.nav-btn {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-  color: #222;
-}
+.nav-btn { display: none; font-size: 26px; cursor: pointer; }
 
-.nav-box {
-  display: flex;
-  align-items: center;
-}
+.nav-box { display: flex; align-items: center; }
 
 .nav-list {
   list-style: none;
   display: flex;
   gap: 80px;
-  font-size: 12px;
 }
 
 .nav-link {
@@ -56,91 +45,50 @@ body {
   color: #222;
   font-weight: bold;
   transition: 0.3s;
-  padding: 8px 0;
 }
 
-.nav-link:hover {
-  color: #f5c400;
-}
+.nav-link:hover { color: #f5c400; }
 
 .close-btn {
   display: none;
-  font-size: 26px;
-  cursor: pointer;
-  color: #222;
   position: absolute;
   top: 20px;
   right: 20px;
+  cursor: pointer;
 }
 
 /* =========================
    Hero Section
 ========================= */
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  min-height: 90vh;
-}
-
-.hero-overlay {
-  flex: 1;
-  position: relative;
-  margin: 80px;
-}
-
-.hero-overlay img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+.hero { display: flex; flex-wrap: wrap; min-height: 90vh; }
 
 .hero-content {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  padding: 10px 10px 10px 80px;
-  background-color: #f8f8f8;
+  padding: 20px 50px;
 }
 
-.hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
+.hero-content h1 { font-size: 2.5rem; margin-bottom: 20px; }
+.hero-content p { font-size: 1.2rem; margin-bottom: 30px; }
 
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.btn-outline,
-.btn-fill {
-  display: inline-block;
+.hero-buttons a {
   padding: 15px 25px;
   margin-right: 15px;
   text-decoration: none;
   transition: all 0.3s;
 }
 
-.btn-outline {
-  border: 2px solid #222;
-  color: #222;
-}
+.btn-outline { border: 2px solid #222; color: #222; }
+.btn-outline:hover { background-color: #222; color: #fff; }
+.btn-fill { border: none; background-color: #222; color: #fff; }
 
-.btn-outline:hover {
-  background-color: #222;
-  color: #fff;
-}
-
-.btn-fill {
-  border: none;
-  background-color: #222;
-  color: #fff;
-}
+.hero-overlay { flex: 1; margin: 20px; }
+.hero-overlay img { width: 100%; height: 100%; object-fit: cover; }
 
 /* =========================
-   Cards
+   Services Cards
 ========================= */
 .cards {
   display: grid;
@@ -162,7 +110,7 @@ body {
 }
 
 .card:hover {
-  transform: translateY(-10px) scale(1.03) rotateX(5deg);
+  transform: translateY(-10px) scale(1.03);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -170,25 +118,9 @@ body {
   font-size: 2.5rem;
   color: #f5c400;
   margin-bottom: 15px;
-  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.card:hover i {
-  transform: scale(1.2);
-  color: #ff9100;
-}
-
-.card h3 {
-  color: #222;
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: #555;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
+.card:hover i { color: #ff9100; }
 
 /* =========================
    Footer
@@ -197,7 +129,6 @@ body {
   background: #111;
   color: #fff;
   padding: 50px 20px 20px;
-  margin-top: 50px;
   font-size: 0.9rem;
 }
 
@@ -209,32 +140,9 @@ body {
   margin: 0 auto;
 }
 
-.footer-col h3 {
-  color: #f5c400;
-  margin-bottom: 15px;
-}
-
-.footer-col p,
-.footer-col li,
-.footer-col a {
-  color: #ddd;
-  text-decoration: none;
-  line-height: 1.6;
-}
-
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-col li {
-  margin-bottom: 10px;
-}
-
-.footer-col a:hover {
-  color: #f5c400;
-  transition: 0.3s;
-}
+.footer-col h3 { color: #f5c400; margin-bottom: 15px; }
+.footer-col p, .footer-col a { color: #ddd; text-decoration: none; }
+.footer-col a:hover { color: #f5c400; transition: 0.3s; }
 
 .footer-bottom {
   text-align: center;
@@ -245,91 +153,54 @@ body {
 }
 
 /* =========================
-   Responsive
+   Snowfall Effect
 ========================= */
-@media (max-width: 1024px) {
-  .nav-list {
-    gap: 40px;
-  }
+#snow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; }
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  animation-name: fall;
+  animation-timing-function: linear;
 }
 
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0.3; }
+}
+
+/* =========================
+   Responsive
+========================= */
 @media (max-width: 768px) {
-  .nav-btn {
-    display: block;
-    font-size: 20px;
-  }
-
-  .nav-logo img {
-    height: 30px;
-  }
-
+  .nav-btn { display: block; }
   .nav-box {
     position: fixed;
     top: 0;
     right: -100%;
+    width: 60%;
     height: 100%;
-    width: 50%;
-    background: #fff;
     flex-direction: column;
-    align-items: start;
     padding: 80px 20px;
-    gap: 20px;
+    background: #fff;
     transition: 0.3s;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
   }
-
-  .nav-box.active {
-    right: 0;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-  }
-
-  .close-btn {
-    display: block;
-    font-size: 20px;
-  }
-
+  .nav-box.active { right: 0; }
+  .nav-list { flex-direction: column; gap: 15px; }
+  .close-btn { display: block; }
+}
+@media (max-width: 600px) {
   .hero {
     flex-direction: column;
-  }
-
-  .hero-overlay {
-    margin: 20px;
-  }
-
-  .hero-content {
-    padding: 10px;
-    text-align: center;
-    align-items: center;
-  }
-
-  .hero-content h1 {
-    font-size: 30px;
-    margin: 20px;
-  }
-
-  .hero-content p {
-    margin: 0 20px 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-box {
-    width: 70%;
-  }
-
-  .btn-outline,
-  .btn-fill {
-    width: 100%;
-    margin: 10px 0;
     text-align: center;
   }
-
-  .hero-content h1 {
-    font-size: 25px;
+  .hero-content, .hero-overlay {
+    padding: 20px;
+    margin: 0;
   }
+  .hero-content h1 { font-size: 2rem; }
 }

@@ -22,6 +22,31 @@ document.querySelectorAll(".nav-link").forEach(link => {
 
 
 
+// =========================
+// Snowfall Animation (Christmas Theme)
+// =========================
+function createSnowflake() {
+  const snow = document.createElement("div");
+  snow.classList.add("snowflake");
+
+  const size = Math.random() * 5 + 5 + "px";
+  snow.style.width = size;
+  snow.style.height = size;
+
+  snow.style.left = Math.random() * window.innerWidth + "px";
+  snow.style.animationDuration = Math.random() * 5 + 5 + "s";
+  snow.style.animationDelay = Math.random() * 5 + "s";
+
+  document.getElementById("snow").appendChild(snow);
+
+  setTimeout(() => { snow.remove(); }, 10000);
+}
+
+// Generate snowflakes continuously
+setInterval(createSnowflake, 200);
+
+
+
 
 
 
