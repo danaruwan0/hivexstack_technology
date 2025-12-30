@@ -33,3 +33,18 @@ function createSnowflake() {
 
 // Generate snowflakes continuously
 setInterval(createSnowflake, 200);
+
+
+
+// =========================
+// Limited Offer Popup
+// =========================
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.getElementById("offerOverlay").style.display = "flex";
+  }, 2000);
+});
+
+document.getElementById("offerClose").addEventListener("click", () => {
+  document.getElementById("offerOverlay").style.display = "none";
+});

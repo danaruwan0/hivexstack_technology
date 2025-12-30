@@ -78,7 +78,7 @@ body {
    display: flex;
     align-items: center;
 
-    
+
     
 
 }  
@@ -211,5 +211,96 @@ body {
     padding: 20px;
     margin: 0;
   }
-  .hero-content h1 { font-size: 2rem; }
+  .hero-content h1 { font-size: 1.4rem; }
+
+  .hero-content p { font-size: 1rem; }
+
+  .btn-outline {  font-size: 14px;  }
+
+.btn-fill { font-size: 14px;  }
+}
+
+
+
+
+
+/* =========================
+   Limited Offer Popup
+========================= */
+.offer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9998;
+}
+
+.offer-card {
+  background: #e4e1e1;
+  padding: 30px;
+  max-width: 350px;
+  width: 90%;
+  text-align: center;
+  border-radius: 15px;
+  position: relative;
+  animation: pop 0.4s ease;
+}
+
+
+.offer-icon {
+  color: #f5c400;
+  margin-right: 8px;
+  font-size: 1.4rem;
+}
+
+.offer-card h2 {
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.offer-valid {
+
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.offer-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #f5c400;
+  color: #ffffff;
+  text-decoration: none;
+  
+  font-weight: bold;
+  
+}
+.offer-btn i {
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+
+.offer-btn:hover {
+  background: #ff9800;
+}
+
+.offer-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
