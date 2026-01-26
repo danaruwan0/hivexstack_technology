@@ -45,6 +45,7 @@ body {
   color: #222;
   font-weight: bold;
   transition: 0.3s;
+  font-size: 12px;
 }
 
 .nav-link:hover { color: #f5c400; }
